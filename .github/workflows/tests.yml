@@ -46,6 +46,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Display workflow information
+        run: |
+          echo "==================== Workflow Information ===================="
+          echo "Branch: ${{ github.ref_name }}"
+          echo "Commit SHA: ${{ github.sha }}"
+          echo "Triggered by: ${{ github.actor }}"
+          echo "Event: ${{ github.event_name }}"
+          echo "Repository: ${{ github.repository }}"
+          echo "=============================================================="
+
       - name: Build setup
         uses: ./.github/common/
 
@@ -64,6 +74,16 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+
+      - name: Display workflow information
+        run: |
+          echo "==================== Workflow Information ===================="
+          echo "Branch: ${{ github.ref_name }}"
+          echo "Commit SHA: ${{ github.sha }}"
+          echo "Triggered by: ${{ github.actor }}"
+          echo "Event: ${{ github.event_name }}"
+          echo "Repository: ${{ github.repository }}"
+          echo "=============================================================="
 
       - name: Build setup
         uses: ./.github/common/
